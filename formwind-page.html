@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WindWave Order Form | Wind Energy for Smart Cities</title>
+  <meta name="description" content="A JavaScript form with validation, shown through a wind energy smart city order desk." />
+  <link rel="stylesheet" href="formwind-style.css" />
+</head>
+<body>
+  <header class="fwv-hero">
+    <div class="fwv-hero-inner">
+      <p class="fwv-eyebrow">Practicum &middot; Form Validation &amp; Smart City Energy</p>
+      <h1>Wind<span>Wave</span> Shop</h1>
+      <p class="fwv-lead">Harnessing wind energy for smart cities. Order your kit, and let JavaScript check every field.</p>
+      <nav>
+        <a href="#theory">VI. Theory</a>
+        <a href="#setup">VII. Set-up</a>
+        <a href="#order">Order Desk</a>
+      </nav>
+    </div>
+
+    <div class="fwv-turbines" aria-hidden="true">
+      <svg class="fwv-turbine fwv-t1" viewBox="0 0 100 160">
+        <path class="fwv-tower" d="M48 66 L52 66 L56 160 L44 160 Z" />
+        <g class="fwv-blades">
+          <path d="M50 60 L46.5 8 Q50 2 53.5 8 Z" />
+          <path d="M50 60 L46.5 8 Q50 2 53.5 8 Z" transform="rotate(120 50 60)" />
+          <path d="M50 60 L46.5 8 Q50 2 53.5 8 Z" transform="rotate(240 50 60)" />
+        </g>
+        <circle cx="50" cy="60" r="4.5" class="fwv-hub" />
+      </svg>
+      <svg class="fwv-turbine fwv-t2" viewBox="0 0 100 160">
+        <path class="fwv-tower" d="M48 66 L52 66 L56 160 L44 160 Z" />
+        <g class="fwv-blades">
+          <path d="M50 60 L46.5 8 Q50 2 53.5 8 Z" />
+          <path d="M50 60 L46.5 8 Q50 2 53.5 8 Z" transform="rotate(120 50 60)" />
+          <path d="M50 60 L46.5 8 Q50 2 53.5 8 Z" transform="rotate(240 50 60)" />
+        </g>
+        <circle cx="50" cy="60" r="4.5" class="fwv-hub" />
+      </svg>
+    </div>
+
+    <div class="fwv-waves" aria-hidden="true">
+      <svg class="fwv-wave fwv-wave-back" viewBox="0 0 2880 80" preserveAspectRatio="none">
+        <path d="M0 40 Q180 0 360 40 T720 40 T1080 40 T1440 40 T1800 40 T2160 40 T2520 40 T2880 40 V80 H0 Z" />
+      </svg>
+      <svg class="fwv-wave fwv-wave-front" viewBox="0 0 2880 80" preserveAspectRatio="none">
+        <path d="M0 40 Q180 0 360 40 T720 40 T1080 40 T1440 40 T1800 40 T2160 40 T2520 40 T2880 40 V80 H0 Z" />
+      </svg>
+    </div>
+  </header>
+
+  <main>
+    <section id="theory" class="fwv-card">
+      <h2><span>VI.</span> Minimum Underpinning Theory</h2>
+      <p>
+        The minimum underpinning theory for developing a form with validation using JavaScript is based
+        on understanding the Document Object Model (DOM), JavaScript events, and logical condition
+        handling. Forms in HTML provide a structure for collecting user input, while JavaScript enables
+        dynamic validation by accessing form elements through the DOM. Using event listeners (such as
+        <code>onsubmit</code> or <code>oninput</code>), JavaScript can intercept form submissions or input
+        changes and check whether the entered values meet predefined constraints, such as required
+        fields, format patterns, or character limits.
+      </p>
+      <p>
+        Conditional statements (<code>if</code>, <code>else</code>) are used to compare user inputs against
+        validation rules, providing real-time feedback by displaying messages or highlighting fields.
+        This approach enhances usability by ensuring data accuracy before it reaches the server, reduces
+        server-side load, and improves the overall responsiveness of the application.
+      </p>
+      <ul class="fwv-pills">
+        <li>DOM access</li>
+        <li>onsubmit</li>
+        <li>oninput</li>
+        <li>Required fields</li>
+        <li>Format patterns</li>
+        <li>Character limits</li>
+        <li>if / else</li>
+      </ul>
+    </section>
+
+    <section id="setup" class="fwv-card">
+      <h2><span>VII.</span> Practicum Set-up</h2>
+      <p class="fwv-sub">The shop sells four smart-city wind kits. Prices are in rupees (Rs.).</p>
+      <div class="fwv-products">
+        <article class="fwv-product">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><g class="fwv-spin-slow"><path d="M32 32 L29 6 Q32 2 35 6 Z" /><path d="M32 32 L29 6 Q32 2 35 6 Z" transform="rotate(120 32 32)" /><path d="M32 32 L29 6 Q32 2 35 6 Z" transform="rotate(240 32 32)" /></g><circle cx="32" cy="32" r="4" class="fwv-ic-acc" /></svg>
+          <h3>Blade Kit</h3><p>Rs. 300</p>
+        </article>
+        <article class="fwv-product">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 44 Q20 30 32 44 T56 44" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" /><path d="M8 28 Q20 14 32 28 T56 28" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" opacity=".5" /></svg>
+          <h3>Wind Sensor</h3><p>Rs. 200</p>
+        </article>
+        <article class="fwv-product">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="30" y="18" width="4" height="40" /><path d="M32 18 Q32 6 46 6" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" /><circle cx="46" cy="10" r="5" class="fwv-ic-acc" /></svg>
+          <h3>Street-Light Turbine</h3><p>Rs. 250</p>
+        </article>
+        <article class="fwv-product">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="20" width="40" height="28" rx="5" fill="none" stroke="currentColor" stroke-width="4" /><rect x="52" y="30" width="5" height="8" /><path d="M34 24 L26 36 H33 L30 44 L40 31 H33 Z" class="fwv-ic-acc" /></svg>
+          <h3>Battery Pack</h3><p>Rs. 350</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="order" class="fwv-card">
+      <h2>Order Desk</h2>
+      <p class="fwv-sub">Type in the fields: <code>oninput</code> checks as you go, and <code>onsubmit</code> checks everything before the bill is made.</p>
+
+      <div class="fwv-layout">
+        <form id="fwv-form" class="fwv-form" novalidate>
+          <h3>Order Kits</h3>
+
+          <label for="fwv-name">Customer name <span class="fwv-count" id="fwv-name-count">0 / 30</span></label>
+          <input id="fwv-name" type="text" maxlength="40" autocomplete="name" placeholder="e.g. Asha Kumar" />
+          <small class="fwv-err" id="fwv-name-err" role="alert"></small>
+
+          <label for="fwv-phone">Mobile number</label>
+          <input id="fwv-phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10 digits, starts with 6-9" />
+          <small class="fwv-err" id="fwv-phone-err" role="alert"></small>
+
+          <fieldset>
+            <legend>Quantities (0 to 10 each)</legend>
+
+            <label for="fwv-q1">Blade Kit (Quantity)</label>
+            <input id="fwv-q1" class="fwv-qty" type="number" min="0" max="10" data-item="Blade Kit" data-price="300" value="0" />
+            <small class="fwv-err" id="fwv-q1-err" role="alert"></small>
+
+            <label for="fwv-q2">Wind Sensor (Quantity)</label>
+            <input id="fwv-q2" class="fwv-qty" type="number" min="0" max="10" data-item="Wind Sensor" data-price="200" value="0" />
+            <small class="fwv-err" id="fwv-q2-err" role="alert"></small>
+
+            <label for="fwv-q3">Street-Light Turbine (Quantity)</label>
+            <input id="fwv-q3" class="fwv-qty" type="number" min="0" max="10" data-item="Street-Light Turbine" data-price="250" value="0" />
+            <small class="fwv-err" id="fwv-q3-err" role="alert"></small>
+
+            <label for="fwv-q4">Battery Pack (Quantity)</label>
+            <input id="fwv-q4" class="fwv-qty" type="number" min="0" max="10" data-item="Battery Pack" data-price="350" value="0" />
+            <small class="fwv-err" id="fwv-q4-err" role="alert"></small>
+          </fieldset>
+
+          <p class="fwv-live">Running total: <strong id="fwv-live-total">Rs. 0</strong></p>
+          <small class="fwv-err fwv-err-main" id="fwv-form-err" role="alert"></small>
+
+          <button class="fwv-btn" type="submit">Place Order</button>
+          <button class="fwv-btn fwv-btn-ghost" type="reset" id="fwv-reset">Clear</button>
+        </form>
+
+        <aside class="fwv-bill" id="fwv-bill" aria-live="polite">
+          <h3>Purchase Order Bill</h3>
+          <div id="fwv-bill-empty" class="fwv-empty">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><g class="fwv-spin-slow"><path d="M32 32 L29 6 Q32 2 35 6 Z" /><path d="M32 32 L29 6 Q32 2 35 6 Z" transform="rotate(120 32 32)" /><path d="M32 32 L29 6 Q32 2 35 6 Z" transform="rotate(240 32 32)" /></g><circle cx="32" cy="32" r="4" class="fwv-ic-acc" /></svg>
+            <p>Place a valid order and your bill appears here.</p>
+          </div>
+          <div id="fwv-bill-body" hidden>
+            <p class="fwv-bill-meta" id="fwv-bill-meta"></p>
+            <table>
+              <thead><tr><th>Item</th><th>Qty</th><th>Price</th><th>Amount</th></tr></thead>
+              <tbody id="fwv-bill-rows"></tbody>
+            </table>
+            <div class="fwv-total"><span>Total Price</span><strong id="fwv-bill-total">Rs. 0</strong></div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="fwv-log-wrap">
+        <h3>Validation log</h3>
+        <ul id="fwv-log" class="fwv-log" aria-live="polite"><li>Waiting for input...</li></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="fwv-footer">WindWave Shop &middot; Wind energy for smart cities &middot; Built with HTML, CSS and JavaScript</footer>
+
+  <script src="formwind-script.js"></script>
+</body>
+</html>
